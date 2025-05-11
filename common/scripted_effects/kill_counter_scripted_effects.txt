@@ -1,0 +1,39 @@
+# This file contains scripted effects for updating the kill counter
+
+kill_counter_initialize = {
+    # Initialize the kill counter if it doesn't exist
+    if = {
+        limit = {
+            NOT = { has_country_flag = kill_counter_initialized }
+        }
+        set_country_flag = kill_counter_initialized
+        set_variable = {
+            which = kill_counter
+            value = 0
+        }
+    }
+}
+
+kill_counter_update = {
+    # Update the kill counter and trigger UI refresh
+    kill_counter_initialize = yes
+    
+    if = {
+        limit = {
+            has_global_flag = kill_counter_updated_multiple
+        }
+        add_variable = {
+            which = kill_counter
+            value = global_var:kill_counter_amount
+        }
+        remove_global_flag = kill_counter_updated_multiple
+    }
+    else = {
+        add_variable = {
+            which = kill_counter
+            value = 1
+        }
+    }
+    
+    remove_global_flag = kill_counter_updated
+} 

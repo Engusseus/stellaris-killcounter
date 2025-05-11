@@ -1,0 +1,11 @@
+on_planet_destroyed = {
+    events = {
+        kill_counter.1
+    }
+}
+
+on_pop_purged = {
+    events = {
+        kill_counter.2
+    }
+} 

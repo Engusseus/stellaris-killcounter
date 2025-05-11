@@ -1,0 +1,18 @@
+genocide_counter = {
+    position = { x = -200 y = -100 }
+    size = { width = 180 height = 30 }
+    moveable = 0
+    dontRender = ""
+    alwaysRender = yes
+    renderBelowParent = yes
+    
+    instantTextBoxType = {
+        name = "genocide_counter_text"
+        position = { x = 0 y = 0 }
+        size = { width = 180 height = 30 }
+        font = "vic_18"
+        text = "[GetGenocideCount]"
+        format = center
+        tooltip = "[GetGenocideCountTooltip]"
+    }
+} 

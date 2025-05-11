@@ -1,0 +1,25 @@
+# This file contains scripted effects for the kill counter mod
+
+kill_counter_increment = {
+    # Increment the kill counter by 1
+    add_country_modifier = {
+        modifier = kill_counter_modifier
+        days = -1
+    }
+    add_global_flag = kill_counter_updated
+}
+
+kill_counter_increment_multiple = {
+    # Increment the kill counter by a specified amount
+    # Usage: kill_counter_increment_multiple = { amount = 10 }
+    add_country_modifier = {
+        modifier = kill_counter_modifier
+        days = -1
+    }
+    add_global_flag = kill_counter_updated
+    add_global_flag = kill_counter_updated_multiple
+    set_global_variable = {
+        which = kill_counter_amount
+        value = amount
+    }
+} 

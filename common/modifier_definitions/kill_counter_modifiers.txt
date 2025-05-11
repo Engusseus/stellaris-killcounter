@@ -1,0 +1,5 @@
+kill_counter_modifier = {
+    icon = "gfx/interface/icons/modifiers/modifier_kill_counter.dds"
+    modifier_type = country_resource_mult
+    kill_counter = 1
+} 

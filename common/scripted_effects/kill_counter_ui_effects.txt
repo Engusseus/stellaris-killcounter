@@ -1,0 +1,12 @@
+# This file contains scripted effects for the kill counter UI
+
+GetKillCounter = {
+    # Returns the current kill counter value
+    kill_counter_initialize = yes
+    return = variable:kill_counter
+}
+
+GetKillCounterTooltip = {
+    # Returns the tooltip text
+    return = "Total number of pops killed through planet destruction or purging"
+} 
