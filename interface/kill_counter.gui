@@ -7,15 +7,16 @@ guiTypes = {
         dontRender = ""
         alwaysRender = yes
         renderBelowParent = yes
+        parent = "top_bar"
         
         instantTextBoxType = {
             name = "genocide_counter_text"
             position = { x = 0 y = 0 }
             size = { width = 180 height = 30 }
             font = "vic_18"
-            text = "[GetGenocideCount]"
+            text = "[This.GetKillCounter]"
             format = center
-            tooltip = "[GetGenocideCountTooltip]"
+            tooltip = "[This.GetKillCounterTooltip]"
         }
     }
 } 

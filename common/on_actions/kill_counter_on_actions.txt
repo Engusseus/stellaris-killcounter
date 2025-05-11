@@ -2,10 +2,17 @@ on_planet_destroyed = {
     events = {
         kill_counter.1
     }
+    # In 4.0, This = Planet, From = Country that destroyed it
+    save_scope_as = destroyed_planet
+    save_scope_as = destroyer_country
 }
 
 on_pop_purged = {
     events = {
         kill_counter.2
     }
+    # In 4.0, This = Planet, From = Country that purged, FromFrom = Pop group
+    save_scope_as = purged_planet
+    save_scope_as = purger_country
+    save_scope_as = purged_pop_group
 } 

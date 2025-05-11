@@ -1,4 +1,4 @@
 l_english:
  # GUI Elements
- GetGenocideCount:0 "Genocide Count: [Root.GetKillCounter]"
- GetGenocideCountTooltip:0 "Total number of pops killed through planet destruction or purging" 
+ GetKillCounter:0 "Genocide Count: [This.GetKillCounter]"
+ GetKillCounterTooltip:0 "Total number of pop groups killed through planet destruction or purging" 

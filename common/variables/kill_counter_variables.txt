@@ -1,0 +1,9 @@
+country_variable = {
+    name = kill_counter
+    initial_value = 0
+}
+
+global_variable = {
+    name = kill_counter_amount
+    initial_value = 0
+} 

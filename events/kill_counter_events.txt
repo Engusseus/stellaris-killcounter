@@ -1,5 +1,20 @@
 namespace = kill_counter
 
+# Initialization event
+country_event = {
+    id = kill_counter.00
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        set_country_flag = kill_counter_initialized
+        set_variable = {
+            which = kill_counter
+            value = 0
+        }
+    }
+}
+
 # Event triggered when a planet is destroyed
 country_event = {
     id = kill_counter.1
@@ -8,15 +23,14 @@ country_event = {
     
     trigger = {
         is_country_type = default
-        has_planet_destroyed = yes
     }
     
     immediate = {
-        # Get the number of pops that were on the destroyed planet
+        # Get the number of pop groups that were on the destroyed planet
         save_temporary_scope_as = destroyed_planet
         set_variable = {
             which = temp_pop_count
-            value = @destroyed_planet.num_pops
+            value = @destroyed_planet.pop_amount
         }
         
         # Update the counter
@@ -37,15 +51,14 @@ country_event = {
     
     trigger = {
         is_country_type = default
-        has_purged_pops = yes
     }
     
     immediate = {
-        # Get the number of pops that were purged
+        # Get the number of pop groups that were purged
         save_temporary_scope_as = purged_pops
         set_variable = {
             which = temp_pop_count
-            value = @purged_pops.num_pops
+            value = @purged_pops.pop_amount
         }
         
         # Update the counter

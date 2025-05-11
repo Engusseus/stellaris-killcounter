@@ -5,5 +5,5 @@ tags={
 	"Interface"
 }
 name="Kill Counter"
-supported_version="3.12.*"
+supported_version="4.0.*"
 path="mod/killcounter" 
